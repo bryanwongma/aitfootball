@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Competition Results</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .group {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        h2 {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 15px;
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        th {
+            background-color: #f1f8ff;
+            color: #2c3e50;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+
+        td:first-child {
+            text-align: left;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+
+        th:first-child {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+
+        th:last-child, td:last-child {
+            font-weight: bold;
+            color: #2c3e50;
+            background-color: #f0f7ff;
+        }
+
+        .video-link {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between thumbnails */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        }
+
+        .video-thumbnail {
+            width: 320px;
+            height: 180px;
+            border: none;
+            transition: transform 0.3s ease; /* Smooth transform on hover */
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.05); /* Slightly enlarge thumbnails on hover */
+        }
+
+        @media (max-width: 768px) {
+            .video-thumbnail {
+                width: 240px;
+                height: 135px; /* Adjust size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-link {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .video-thumbnail {
+                width: 100%; /* Full width on very small screens */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Football Competition Results</h1>
+
+    <div class="container">
+        <div class="group">
+            <h2>Group A</h2>
+            <table>
+                <tr>
+                    <th>Team</th>
+                    <th>MP</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>ICT International FC</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Nepal1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>AIT staff fc</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="group">
+            <h2>Group B</h2>
+            <table>
+                <tr>
+                    <th>Team</th>
+                    <th>MP</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>AIT Boys</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Nepal2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-2</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Myanmar</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- YouTube Video Thumbnails -->
+    <div class="video-link">
+        <a href="https://youtube.com/live/5LFRBvrBfLQ">
+            <img src="https://img.youtube.com/vi/5LFRBvrBfLQ/0.jpg" alt="Video Thumbnail" class="video-thumbnail">
+        </a>
+        <a href="https://youtube.com/live/4eO87yA312s">
+            <img src="https://img.youtube.com/vi/4eO87yA312s/0.jpg" alt="Video Thumbnail" class="video-thumbnail">
+        </a>
+    </div>
+</body>
+</html>
